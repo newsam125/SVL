@@ -1,0 +1,7 @@
+Flask==3.0.0
+Flask-CORS==3.0.10
+requests==2.26.0
+beautifulsoup4==4.9.3
+langdetect==1.0.9
+gunicorn==20.1.0
+Werkzeug==3.0.0
