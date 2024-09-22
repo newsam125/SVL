@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>短视频讲稿生成器</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>短视频讲稿生成器</h1>
+        </header>
+        <main>
+            <form id="inputForm">
+                <div class="input-group">
+                    <label for="urlInput">文章URL</label>
+                    <input type="text" id="urlInput" placeholder="请输入微信公众号文章URL">
+                </div>
+                <div class="input-group">
+                    <label for="contentInput">文章内容</label>
+                    <textarea id="contentInput" placeholder="或在此粘贴文章内容（如果无法自动获取）" rows="6"></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label for="toneSelect">语气</label>
+                    <select id="toneSelect">
+                        <option value="幽默">幽默风趣</option>
+                        <option value="正式">正式严肃</option>
+                        <option value="轻松">轻松随意</option>
+                        <option value="激情">激情澎湃</option>
+                        <option value="温柔">温柔亲和</option>
+                        <option value="专业">专业权威</option>
+                        <option value="诙谐">诙谐搞笑</option>
+                        <option value="感性">感性抒情</option>
+                        <option value="神秘">神秘悬疑</option>
+                        <option value="励志">励志鼓舞</option>
+                    </select>
+                    <input type="text" id="customTone" placeholder="或输入自定义语气">
+                </div>
+                
+                <div class="input-group">
+                    <label for="styleSelect">风格</label>
+                    <select id="styleSelect">
+                        <option value="新闻播报">新闻播报</option>
+                        <option value="科普解说">科普解说</option>
+                        <option value="情感分析">情感分析</option>
+                        <option value="幽默段子">幽默段子</option>
+                        <option value="励志演讲">励志演讲</option>
+                        <option value="产品介绍">产品介绍</option>
+                        <option value="旅游攻略">旅游攻略</option>
+                        <option value="美食评论">美食评论</option>
+                        <option value="时尚潮流">时尚潮流</option>
+                        <option value="健康养生">健康养生</option>
+                    </select>
+                    <input type="text" id="customStyle" placeholder="或输入自定义风格">
+                </div>
+                
+                <div class="input-group">
+                    <label for="wordCountSelect">字数</label>
+                    <select id="wordCountSelect">
+                        <option value="300">300字</option>
+                        <option value="500">500字</option>
+                        <option value="1000">1000字</option>
+                    </select>
+                </div>
+                
+                <button type="submit">生成讲稿</button>
+            </form>
+            <div id="outputContainer" style="display: none;">
+                <div class="output-header">
+                    <h2>生成的讲稿</h2>
+                    <button id="copyButton">复制讲稿</button>
+                </div>
+                <div id="output"></div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

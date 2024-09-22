@@ -1,0 +1,198 @@
+:root {
+    --primary-color: #4285F4;
+    --secondary-color: #34A853;
+    --background-color: #F8F9FA;
+    --text-color: #202124;
+    --border-color: #DADCE0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+main {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 13px;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #3367D6;
+}
+
+#outputContainer {
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+#copyButton {
+    background-color: var(--secondary-color);
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+#copyButton:hover {
+    background-color: #2E9549;
+}
+
+#output {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 3px;
+}
+
+#manualOptions {
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    max-height: 1000px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+#manualOptions.hidden {
+    max-height: 0;
+    opacity: 0;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 10px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 8px 12px;
+    }
+}
+
+/* 在现有样式的基础上添加以下内容 */
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+#manualOptions {
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    max-height: 1000px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+#manualOptions.hidden {
+    max-height: 0;
+    opacity: 0;
+}
